@@ -70,7 +70,7 @@ fun seconds(hours: Int, minutes: Int, seconds: Int): Int {
     val m = minutes * 60
     return h + m + seconds
 }
-
+// ф
 
 /**
  * Тривиальная (1 балл)
