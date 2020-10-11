@@ -174,15 +174,15 @@ fun isPalindrome(n: Int): Boolean = TODO()
 fun hasDifferentDigits(n: Int): Boolean {
     var m = n
     var k = 0
-    var kol = 0
+    var quantity = 0
     var a = 0
+    k = m % 10
     while (m >= 10) {
-        k = m % 10
         m /= 10
-        if ((m % 10 == k) || (m == k)) kol += 1
+        if (m % 10 == k) quantity += 1
         a += 1
     }
-    return kol != a
+    return quantity != a
 }
 
 /**
