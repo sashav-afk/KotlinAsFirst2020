@@ -122,6 +122,7 @@ fun collatzSteps(x: Int): Int = TODO()
  */
 fun lcm(m: Int, n: Int): Int = TODO()
 
+
 /**
  * Средняя (3 балла)
  *
@@ -130,6 +131,8 @@ fun lcm(m: Int, n: Int): Int = TODO()
  * Например, 25 и 49 взаимно простые, а 6 и 8 -- нет.
  */
 fun isCoPrime(m: Int, n: Int): Boolean = TODO()
+
+
 
 /**
  * Средняя (3 балла)
@@ -168,7 +171,19 @@ fun isPalindrome(n: Int): Boolean = TODO()
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun hasDifferentDigits(n: Int): Boolean = TODO()
+fun hasDifferentDigits(n: Int): Boolean {
+    var m = n
+    var k = 0
+    var kol = 0
+    var a = 0
+    while (m >= 10) {
+        k = m % 10
+        m /= 10
+        if ((m % 10 == k) || (m == k)) kol += 1
+        a += 1
+    }
+    return kol != a
+}
 
 /**
  * Средняя (4 балла)
