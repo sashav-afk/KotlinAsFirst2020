@@ -207,12 +207,8 @@ fun factorize(n: Int): List<Int> = TODO()
 fun factorizeToString(n: Int): String {
     var m = n
     var c = 2
-    var e = 0
     var q: String = ""
-    while (e == 0) {
-        if (m / c == 1) {
-            e = 1
-        }
+    while (m != 1) {
         if (m % c == 0) {
             q = if (q == "") {
                 "$c"
