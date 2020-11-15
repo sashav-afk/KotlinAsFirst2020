@@ -123,6 +123,7 @@ fun collatzSteps(x: Int): Int = TODO()
 fun lcm(m: Int, n: Int): Int = TODO()
 
 
+
 /**
  * Средняя (3 балла)
  *
@@ -131,8 +132,6 @@ fun lcm(m: Int, n: Int): Int = TODO()
  * Например, 25 и 49 взаимно простые, а 6 и 8 -- нет.
  */
 fun isCoPrime(m: Int, n: Int): Boolean = TODO()
-
-
 
 /**
  * Средняя (3 балла)
@@ -150,7 +149,15 @@ fun squareBetweenExists(m: Int, n: Int): Boolean = TODO()
  *
  * Использовать операции со строками в этой задаче запрещается.
  */
-fun revert(n: Int): Int = TODO()
+fun revert(n: Int): Int {
+    var m = n
+    var c = 0
+    while (m > 0) {
+        c = c * 10 + m % 10
+        m /= 10
+    }
+    return c
+}
 
 /**
  * Средняя (3 балла)
