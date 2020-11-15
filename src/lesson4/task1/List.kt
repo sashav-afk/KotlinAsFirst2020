@@ -139,11 +139,11 @@ fun mean(list: List<Double>): Double = TODO()
  */
 fun center(list: MutableList<Double>): MutableList<Double> {
     var n: Double = 0.0
-    for (i in 0..list.size) {
+    for (i in 0 until list.size) {
         n += list[i]
     }
     n /= list.size
-    for (i in 0..list.size)
+    for (i in 0 until list.size)
         list[i] = list[i] - n
     return list
 
@@ -181,7 +181,7 @@ fun polynom(p: List<Int>, x: Int): Int = TODO()
  */
 fun accumulate(list: MutableList<Int>): MutableList<Int> {
     var n = 0
-    for (i in 1..list.size) {
+    for (i in (0 until list.size)) {
         n += list[i]
         list[i] = n
     }
