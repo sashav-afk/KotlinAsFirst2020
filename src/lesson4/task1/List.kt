@@ -137,7 +137,18 @@ fun mean(list: List<Double>): Double = TODO()
  *
  * Обратите внимание, что данная функция должна изменять содержание списка list, а не его копии.
  */
-fun center(list: MutableList<Double>): MutableList<Double> = TODO()
+fun center(list: MutableList<Double>): MutableList<Double> {
+    var n: Double = 0.0
+    for (i in 0..list.size) {
+        n += list[i]
+    }
+    n /= list.size
+    for (i in 0..list.size)
+        list[i] = list[i] - n
+    return list
+
+}
+
 
 /**
  * Средняя (3 балла)
@@ -168,7 +179,14 @@ fun polynom(p: List<Int>, x: Int): Int = TODO()
  *
  * Обратите внимание, что данная функция должна изменять содержание списка list, а не его копии.
  */
-fun accumulate(list: MutableList<Int>): MutableList<Int> = TODO()
+fun accumulate(list: MutableList<Int>): MutableList<Int> {
+    var n = 0
+    for (i in 1..list.size) {
+        n += list[i]
+        list[i] = n
+    }
+    return list
+}
 
 /**
  * Средняя (3 балла)
@@ -186,7 +204,27 @@ fun factorize(n: Int): List<Int> = TODO()
  * Результат разложения вернуть в виде строки, например 75 -> 3*5*5
  * Множители в результирующей строке должны располагаться по возрастанию.
  */
-fun factorizeToString(n: Int): String = TODO()
+fun factorizeToString(n: Int): String {
+    var m = n
+    var c = 2
+    var e = 0
+    var q: String = ""
+    while (e == 0) {
+        if (m / c == 1) {
+            e = 1
+        }
+        if (m % c == 0) {
+            q = if (q == "") {
+                "$c"
+            } else "$q*$c"
+            m /= c
+        } else c += 1
+    }
+    if (q == "") {
+        q = "$n"
+    }
+    return q
+}
 
 /**
  * Средняя (3 балла)
@@ -196,6 +234,7 @@ fun factorizeToString(n: Int): String = TODO()
  * например: n = 100, base = 4 -> (1, 2, 1, 0) или n = 250, base = 14 -> (1, 3, 12)
  */
 fun convert(n: Int, base: Int): List<Int> = TODO()
+
 
 /**
  * Сложная (4 балла)
